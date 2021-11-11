@@ -6,15 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mentor_referral_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mentor Referral</title>
 </head>
 
 <body>
     <div class="container">
-        <section class="intro_container">
+        <section class="intro_container" id="intro_container">
             <div class="penrose_logo">
                 <img src="https://learntocode.penroselearning.com/images/penrose.png" alt="penrose">
             </div>
+            <nav>
+                <div class="navbar">
+                    <ul id="links" class="links">
+                        <li><a id="home_link intro_container">Home</a></li>
+                        <li><a id="learining_path_link learning_paths_container">Learning Paths</a></li>
+                        <li><a id="demo_reg_link book_demo_container">Book Demo / Registration</a></li>
+                        <li><a id="sample_codes_link">Sample Codes</a></li>
+                        <li><a id="student_projects_link">Student Projects</a></li>
+                        <li><a id="testimonials_link">Student/Parent Testimonials</a></li>
+                    </ul>
+                </div>
+            </nav>
             <div class="intro_content_container">
                 <h2>Welcome To Penrose Learning Center!</h2>
                 <div class="intro_content">
@@ -25,251 +40,289 @@
                 </div>
             </div>
         </section>
-        <section class="learning_paths_container">
-            <h3>LEARNING PATHS</h3>
+        <section class="learning_paths_container" id="learning_paths_container">
+            <div class="learning_paths_container_content">
+                <h3>LEARNING PATHS</h3>
 
-            <div class="get_dob">
-                <p>Please Enter The Date Of Birth</p>
-                <div class="dob">
-                    <input type="date" name="" id="dob">
-                    <button id="submit_dob">SUBMIT</button>
+                <div class="get_dob">
+                    <p>Please Enter The Date Of Birth</p>
+                    <div class="dob">
+                        <input type="date" name="" id="dob">
+                        <button id="submit_dob">SUBMIT</button>
+                    </div>
+                </div>
+
+                <div class="learning_paths" id="learning_paths">
+                    <div class="complexity_main_container" id="complexity_main_container">
+                        <div class="complexity_container">
+                            <h4>Level Of Complexity</h4>
+                            <div class="complexity_levels">
+                                <p>EASY</p>
+                                <p>MEDIUM</p>
+                                <p>HARD</p>
+                            </div>
+                            <div class="complexity"></div>
+                        </div>
+                    </div>
+
+                    <div class="learning_path age_7_or_below" id="age_7_or_below">
+                        <p>That's a very young age to start programming!<br /><span>At Penrose, we take admissions only
+                                for
+                                ages 8+</span></p>
+                    </div>
+                    <div class="learning_path" id="age_8_to_10">
+                        <h3>Age 8 to 10</h3>
+                        <div class="paths">
+                            <div id="path" class="path easy">
+                                <h4>Gaming</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>Python - Junior</li>
+                                            <li>PyGame Zero</li>
+                                            <li>Gaming Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path medium">
+                                <h4>Web Design</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>Website Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning_path" id="age_11_to_13">
+                        <div class="age_path">
+                            <h3>Age 11 to 13</h3>
+                        </div>
+                        <div class="paths">
+                            <div id="path" class="path easy">
+                                <h4>Gaming</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>Python - Intermediate</li>
+                                            <li>PyGame Zero</li>
+                                            <li>Gaming Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path easy">
+                                <h4>Web Design</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>JavaScript</li>
+                                            <li>Website Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path medium">
+                                <h4>Web App Development with Python</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>JavaScript</li>
+                                            <li>Website Project</li>
+                                            <li>Python Intermediate</li>
+                                            <li>Flask Web Apps</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Web App Development with React JS</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>Website Project</li>
+                                            <li>JavaScript</li>
+                                            <li>React JS</li>
+                                            <li>Web App Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Mobile App Development with React Native</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>Website Project</li>
+                                            <li>JavaScript</li>
+                                            <li>React Native</li>
+                                            <li>Mobile App Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Java</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>Java Fundamentals</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="learning_path" id="age_14_and_above">
+                        <div class="age_path">
+                            <h3>Age 14+</h3>
+                        </div>
+                        <div class="paths">
+                            <div id="path" class="path easy">
+                                <h4>Gaming</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>Python Fast Track</li>
+                                            <li>PyGame Zero</li>
+                                            <li>Gaming Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path easy">
+                                <h4>Web Design</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>JavaScript</li>
+                                            <li>Website Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path medium">
+                                <h4>Web App Development with Python</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>JavaScript</li>
+                                            <li>Website Project</li>
+                                            <li>Python Intermediate</li>
+                                            <li>Flask Web Apps</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Web App Development with React JS</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>Website Project</li>
+                                            <li>JavaScript</li>
+                                            <li>React JS</li>
+                                            <li>Web App Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Mobile App Development with React Native</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>HTML & CSS</li>
+                                            <li>Website Project</li>
+                                            <li>JavaScript</li>
+                                            <li>React Native</li>
+                                            <li>Mobile App Project</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Data Science</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>Python Fask Track</li>
+                                            <li>Data Science Fundamentals</li>
+                                            <li>Machine Learning Using Python</li>
+                                            <li>Deep Learning With Python</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="path" class="path hard">
+                                <h4>Java</h4>
+                                <div class="path_contents">
+                                    <div class="path_content">
+                                        <ul>
+                                            <li>Java Fundamentals</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="learning_paths" id="learning_paths">
-                <div class="complexity_main_container">
-                    <div class="complexity_container">
-                        <h4>Level Of Complexity</h4>
-                        <div class="complexity_levels">
-                            <p>EASY</p>
-                            <p>MEDIUM</p>
-                            <p>HARD</p>
-                        </div>
-                        <div class="complexity"></div>
+        </section>
+        <section class="book_demo_container" id="book_demo_container">
+            <div class="book_demo">
+                <div class="book_demo_title">
+                    <h4>Book your</h4>
+                    <h3>Free</h3>
+                    <h4 class="align_right">Demo Session Today!</h4>
+                </div>
+                <div class="book_demo_link">
+                    <div class="pushable_width">
+                        <a class="pushable" href="https://penrosedata.pythonanywhere.com/demo_registration"
+                            target="_blank">
+                            <span class="front">
+                                Click Here To Book Your Demo Session <i class="fas fa-angle-double-right"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
-                <div class="learning_path" id="age_7_or_below">
-                    <p>That's a very young age to start programming!</p>
+            </div>
+            <div class="register_container">
+                <div class="register_title">
+                    <h1>Register <br /><span>Now.</span></h1>
                 </div>
-                <div class="learning_path" id="age_8_to_10">
-                    <h3>Age 8 to 10</h3>
-                    <div class="paths">
-                        <div id="path" class="path easy">
-                            <h4>Gaming</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>Python - Junior</li>
-                                        <li>PyGame Zero</li>
-                                        <li>Gaming Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path medium">
-                            <h4>Web Design</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>Website Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="learning_path" id="age_11_to_13">
-                    <div class="age_path">
-                        <h3>Age 11 to 13</h3>
-                    </div>
-                    <div class="paths">
-                        <div id="path" class="path easy">
-                            <h4>Gaming</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>Python - Intermediate</li>
-                                        <li>PyGame Zero</li>
-                                        <li>Gaming Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path easy">
-                            <h4>Web Design</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>JavaScript</li>
-                                        <li>Website Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path medium">
-                            <h4>Web App Development with Python</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>JavaScript</li>
-                                        <li>Website Project</li>
-                                        <li>Python Intermediate</li>
-                                        <li>Flask Web Apps</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Web App Development with React JS</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>Website Project</li>
-                                        <li>JavaScript</li>
-                                        <li>React JS</li>
-                                        <li>Web App Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Mobile App Development with React Native</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>Website Project</li>
-                                        <li>JavaScript</li>
-                                        <li>React Native</li>
-                                        <li>Mobile App Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Java</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>Java Fundamentals</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="learning_path" id="age_14_and_above">
-                    <div class="age_path">
-                        <h3>Age 14+</h3>
-                    </div>
-                    <div class="paths">
-                        <div id="path" class="path easy">
-                            <h4>Gaming</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>Python Fast Track</li>
-                                        <li>PyGame Zero</li>
-                                        <li>Gaming Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path easy">
-                            <h4>Web Design</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>JavaScript</li>
-                                        <li>Website Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path medium">
-                            <h4>Web App Development with Python</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>JavaScript</li>
-                                        <li>Website Project</li>
-                                        <li>Python Intermediate</li>
-                                        <li>Flask Web Apps</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Web App Development with React JS</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>Website Project</li>
-                                        <li>JavaScript</li>
-                                        <li>React JS</li>
-                                        <li>Web App Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Mobile App Development with React Native</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>HTML & CSS</li>
-                                        <li>Website Project</li>
-                                        <li>JavaScript</li>
-                                        <li>React Native</li>
-                                        <li>Mobile App Project</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Data Science</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>Python Fask Track</li>
-                                        <li>Data Science Fundamentals</li>
-                                        <li>Machine Learning Using Python</li>
-                                        <li>Deep Learning With Python</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="path" class="path hard">
-                            <h4>Java</h4>
-                            <div class="path_contents">
-                                <div class="path_content">
-                                    <ul>
-                                        <li>Java Fundamentals</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="registration_form_container">
+                    <div class="pushable_width">
+                        <a class="pushable" href="#" target="_blank">
+                            <span class="front">
+                                Click Here To Explore Our Packages <i class="fas fa-angle-double-right"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -284,7 +337,31 @@
         const learning_paths = document.getElementById('learning_paths')
         learning_paths.style.display = "none"
 
+        let ids = []
+        const links = document.getElementById('links').children
+
+        function linkEventListeners(id) {
+
+            document.getElementById(id).addEventListener("click", () => {
+                var scrollDiv = document.getElementById(id.split(' ')[1]).offsetTop;
+                window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+            })
+        }
+
+        for (var i = 0, len = links.length; i < len; i++) {
+            linkEventListeners(links[i].children[0].id)
+        }
+
         function viewLearningPath(learning_path_name) {
+
+            const complexity_main_container = document.getElementById("complexity_main_container")
+
+            if (learning_path_name == 'age_7_or_below') {
+                complexity_main_container.style.display = "none"
+            } else {
+                complexity_main_container.style.display = "flex"
+            }
+
             document.getElementById(learning_path_name).style.display = "block"
             var scrollDiv = document.getElementById(learning_path_name).offsetTop;
             window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
