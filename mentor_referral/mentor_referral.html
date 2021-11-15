@@ -14,19 +14,20 @@
 
 <body>
     <div class="container">
+        <button id="backToTop" class="backToTop"><i class="fas fa-angle-up"></i></button>
         <section class="intro_container" id="intro_container">
             <div class="penrose_logo">
                 <img src="https://learntocode.penroselearning.com/images/penrose.png" alt="penrose">
             </div>
             <nav>
-                <div class="navbar">
+                <div class="navbar" id="navbar">
                     <ul id="links" class="links">
-                        <li><a id="home_link intro_container">Home</a></li>
+                        <li><a id="home_link navbar">Home</a></li>
                         <li><a id="learining_path_link learning_paths_container">Learning Paths</a></li>
                         <li><a id="demo_reg_link book_demo_container">Book Demo / Registration</a></li>
-                        <li><a id="sample_codes_link">Sample Codes</a></li>
-                        <li><a id="student_projects_link">Student Projects</a></li>
-                        <li><a id="testimonials_link">Student/Parent Testimonials</a></li>
+                        <li><a id="sample_codes_link sample_codes">Sample Codes</a></li>
+                        <li><a id="student_projects_link student_assignments">Student Projects</a></li>
+                        <li><a id="testimonials_link testimonials">Student/Parent Testimonials</a></li>
                     </ul>
                 </div>
             </nav>
@@ -327,100 +328,446 @@
                 </div>
             </div>
         </section>
+        <section class="sample_codes" id="sample_codes">
+            <h1>Sample Codes From Our Courses</h1>
+
+            <div id="sample_code_btns" class="sample_code_btns">
+                <!-- <button class="sample_code_btn" id="sample_code1">
+                    Sample 1
+                </button> -->
+            </div>
+
+            <iframe src="iframe_cover.html" id="sample_code_link" frameborder="0">
+
+            </iframe>
+        </section>
+        <section class="student_assignments" id="student_assignments">
+            <h1>Student Assignments</h1>
+
+            <div id="sample_assignment_btns" class="sample_assignment_btns">
+                <!-- <button class="sample_code_btn" id="sample_code1">
+                    Sample 1
+                </button> -->
+            </div>
+
+            <iframe src="iframe_cover.html" id="sample_assignment_link" frameborder="0">
+
+            </iframe>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <h1>Testimonials</h1>
+
+            <h2>Parent Testimonials</h2>
+            <div class="testimonials_container">
+                <button class="testimonial_card_navigate" onclick="scrollTestimonialsLeft()"> <i class="fas fa-angle-left"></i> </button>
+                <div class="testimonial_cards" id="testimonial_cards">
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="testimonial_card_navigate" onclick="scrollRight()"><i class="fas fa-angle-right"></i></button>
+            </div>
+
+            <h2>Student Testimonials</h2>
+            <div class="testimonials_container">
+                <button class="testimonial_card_navigate" onclick="student_scrollTestimonialsLeft()"> <i class="fas fa-angle-left"></i> </button>
+                <div class="testimonial_cards" id="student_testimonial_cards">
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                    <div class="testimonial_card">
+                        <div class="testimonial_img">
+                            <div class="testimonial_profile">
+                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="testimonial_desc">
+                            <h1>"Very Informative!"</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
+                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
+                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="testimonial_card_navigate" onclick="student_scrollRight()"><i class="fas fa-angle-right"></i></button>
+            </div>
+        </section>
     </div>
 
-    <script>
-        const path = document.querySelectorAll('#path')
-
-        const submit_dob = document.getElementById('submit_dob')
-        const dob = document.getElementById('dob')
-        const learning_paths = document.getElementById('learning_paths')
-        learning_paths.style.display = "none"
-
-        let ids = []
-        const links = document.getElementById('links').children
-
-        function linkEventListeners(id) {
-
-            document.getElementById(id).addEventListener("click", () => {
-                var scrollDiv = document.getElementById(id.split(' ')[1]).offsetTop;
-                window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
-            })
-        }
-
-        for (var i = 0, len = links.length; i < len; i++) {
-            linkEventListeners(links[i].children[0].id)
-        }
-
-        function viewLearningPath(learning_path_name) {
-
-            const complexity_main_container = document.getElementById("complexity_main_container")
-
-            if (learning_path_name == 'age_7_or_below') {
-                complexity_main_container.style.display = "none"
-            } else {
-                complexity_main_container.style.display = "flex"
-            }
-
-            document.getElementById(learning_path_name).style.display = "block"
-            var scrollDiv = document.getElementById(learning_path_name).offsetTop;
-            window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
-        }
-
-        submit_dob.addEventListener("click", () => {
-
-            learning_paths.style.display = "block"
-
-
-            const age_7_or_below = document.getElementById('age_7_or_below')
-            const age_8_to_10 = document.getElementById('age_8_to_10')
-            const age_11_to_13 = document.getElementById('age_11_to_13')
-            const age_14_and_above = document.getElementById('age_14_and_above')
-
-            age_7_or_below.style.display = "none"
-            age_8_to_10.style.display = "none"
-            age_11_to_13.style.display = "none"
-            age_14_and_above.style.display = "none"
-
-            var today = new Date();
-            var birthDate = new Date(dob.value);
-            var current_age = today.getFullYear() - birthDate.getFullYear();
-            var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                current_age--;
-            }
-
-            if (current_age < 8) {
-                viewLearningPath('age_7_or_below')
-            }
-            else if (current_age >= 8 && current_age <= 10) {
-                viewLearningPath('age_8_to_10')
-            }
-            else if (current_age >= 11 && current_age <= 13) {
-                viewLearningPath('age_11_to_13')
-            }
-            else if (current_age >= 14) {
-                viewLearningPath('age_14_and_above')
-            }
-
-        })
-
-        for (path_info of path) {
-            if (path_info.classList.contains('easy')) {
-                path_info.style.backgroundColor = "#09ff00"
-                path_info.style.color = "white"
-            }
-            else if (path_info.classList.contains('medium')) {
-                path_info.style.backgroundColor = "#fdff08"
-                path_info.style.color = "black"
-            }
-            else if (path_info.classList.contains('hard')) {
-                path_info.style.backgroundColor = "#fe0000"
-                path_info.style.color = "white"
-            }
-        }
-
-    </script>
+    <script src="mentor_referral.js"></script>
 </body>
 
 </html>
