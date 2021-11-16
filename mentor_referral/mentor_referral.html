@@ -358,8 +358,8 @@
             <h1>Testimonials</h1>
 
             <h2>Parent Testimonials</h2>
-            <div class="testimonials_container">
-                <button class="testimonial_card_navigate" onclick="scrollTestimonialsLeft()"> <i class="fas fa-angle-left"></i> </button>
+            <div class="testimonials_container" id="testimonials_container">
+                <button class="testimonial_card_navigate" onclick="scrollTestimonialsLeft('testimonial_cards')"> <i class="fas fa-angle-left"></i> </button>
                 <div class="testimonial_cards" id="testimonial_cards">
                     <div class="testimonial_card">
                         <div class="testimonial_img">
@@ -459,111 +459,13 @@
                                 Optio ullam dolorum esse saepe, iusto reiciendis.</p>
                         </div>
                     </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
-                    <div class="testimonial_card">
-                        <div class="testimonial_img">
-                            <div class="testimonial_profile">
-                                <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="testimonial_desc">
-                            <h1>"Very Informative!"</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde nihil molestias
-                                harum laudantium vitae est! Ut ullam nihil minima quisquam illo magnam saepe.
-                                Optio ullam dolorum esse saepe, iusto reiciendis.</p>
-                        </div>
-                    </div>
                 </div>
-                <button class="testimonial_card_navigate" onclick="scrollRight()"><i class="fas fa-angle-right"></i></button>
+                <button class="testimonial_card_navigate" onclick="scrollRight('testimonial_cards')"><i class="fas fa-angle-right"></i></button>
             </div>
 
             <h2>Student Testimonials</h2>
             <div class="testimonials_container">
-                <button class="testimonial_card_navigate" onclick="student_scrollTestimonialsLeft()"> <i class="fas fa-angle-left"></i> </button>
+                <button class="testimonial_card_navigate" onclick="scrollTestimonialsLeft('student_testimonial_cards')"> <i class="fas fa-angle-left"></i> </button>
                 <div class="testimonial_cards" id="student_testimonial_cards">
                     <div class="testimonial_card">
                         <div class="testimonial_img">
@@ -762,7 +664,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="testimonial_card_navigate" onclick="student_scrollRight()"><i class="fas fa-angle-right"></i></button>
+                <button class="testimonial_card_navigate" onclick="scrollRight('student_testimonial_cards')"><i class="fas fa-angle-right"></i></button>
             </div>
         </section>
     </div>
