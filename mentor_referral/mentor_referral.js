@@ -5,8 +5,8 @@ const dob = document.getElementById('dob')
 const learning_paths = document.getElementById('learning_paths')
 const backToTop = document.getElementById('backToTop')
 
-learning_paths.style.display = "none"
 
+// back to top button
 window.onscroll = () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         backToTop.style.display = "block";
@@ -19,6 +19,8 @@ backToTop.addEventListener('click', () => {
     window.scrollTo({ top: document.getElementById('navbar'), behavior: 'smooth' });
 })
 
+
+// navigation scroll
 let ids = []
 const links = document.getElementById('links').children
 
@@ -34,6 +36,8 @@ for (let i = 0, len = links.length; i < len; i++) {
     linkEventListeners(links[i].children[0].id)
 }
 
+
+// view sample codes
 const sample_code_link = document.getElementById('sample_code_link')
 
 const sample_code_links = [
@@ -45,56 +49,8 @@ for (let i = 0, len = sample_code_links.length; i < len; i++) {
     document.getElementById('sample_code_btns').innerHTML += `<button class="sample_code_btn" onclick="viewSample(${i})" id="sample_code${i}">Sample ${i + 1}</button>`
 }
 
-function viewSample(sampleLinkIndex) {
-    sample_code_link.src = sample_code_links[sampleLinkIndex]
-    window.scrollTo({ top: sample_code_link.offsetTop - 65, behavior: 'smooth' });
-}
 
-function scrollRight() {
-    const testimonial_cards = document.getElementById('testimonial_cards')
-    let testimonial_cards_scoll_left = testimonial_cards.scrollLeft;
-    const testimonial_scroll_width = testimonial_cards.scrollWidth;
-
-    testimonial_cards_scoll_left += 200;
-    if (testimonial_cards_scoll_left >= testimonial_scroll_width) { testimonial_cards_scoll_left = testimonial_scroll_width; }
-    testimonial_cards.scrollLeft = testimonial_cards_scoll_left;
-}
-
-function scrollTestimonialsLeft() {
-    const testimonial_cards = document.getElementById('testimonial_cards')
-    let testimonial_cards_scoll_left = testimonial_cards.scrollLeft;
-    const testimonial_scroll_width = testimonial_cards.scrollWidth;
-
-    testimonial_cards_scoll_left -= 200;
-    if (testimonial_cards_scoll_left >= testimonial_scroll_width) { testimonial_cards_scoll_left = testimonial_scroll_width; }
-    testimonial_cards.scrollLeft = testimonial_cards_scoll_left;
-}
-
-function student_scrollRight() {
-    const testimonial_cards = document.getElementById('student_testimonial_cards')
-    let testimonial_cards_scoll_left = testimonial_cards.scrollLeft;
-    const testimonial_scroll_width = testimonial_cards.scrollWidth;
-
-    testimonial_cards_scoll_left += 200;
-    if (testimonial_cards_scoll_left >= testimonial_scroll_width) { testimonial_cards_scoll_left = testimonial_scroll_width; }
-    testimonial_cards.scrollLeft = testimonial_cards_scoll_left;
-}
-
-function student_scrollTestimonialsLeft() {
-    const testimonial_cards = document.getElementById('student_testimonial_cards')
-    let testimonial_cards_scoll_left = testimonial_cards.scrollLeft;
-    const testimonial_scroll_width = testimonial_cards.scrollWidth;
-
-    testimonial_cards_scoll_left -= 200;
-    if (testimonial_cards_scoll_left >= testimonial_scroll_width) { testimonial_cards_scoll_left = testimonial_scroll_width; }
-    testimonial_cards.scrollLeft = testimonial_cards_scoll_left;
-}
-
-function viewAssignment(sampleLinkIndex) {
-    sample_assignment_link.src = student_assignments[sampleLinkIndex]
-    window.scrollTo({ top: sample_assignment_link.offsetTop, behavior: 'smooth' });
-}
-
+// view student assignments
 const sample_assignment_link = document.getElementById('sample_assignment_link')
 
 const student_assignments = [
@@ -106,6 +62,43 @@ for (let i = 0, len = student_assignments.length; i < len; i++) {
     document.getElementById('sample_assignment_btns').innerHTML += `<button class="sample_code_btn" onclick="viewAssignment(${i})" id="sample_code${i}">Project ${i + 1}</button>`
 }
 
+function viewSample(sampleLinkIndex) {
+    sample_code_link.src = sample_code_links[sampleLinkIndex]
+    window.scrollTo({ top: sample_code_link.offsetTop - 65, behavior: 'smooth' });
+}
+
+function viewAssignment(sampleLinkIndex) {
+    sample_assignment_link.src = student_assignments[sampleLinkIndex]
+    window.scrollTo({ top: sample_assignment_link.offsetTop, behavior: 'smooth' });
+}
+
+
+// scroll testimonials to right
+function scrollRight(container_id_name) {
+    const testimonial_cards = document.getElementById(container_id_name)
+    let testimonial_cards_scoll_left = testimonial_cards.scrollLeft;
+    const testimonial_scroll_width = testimonial_cards.scrollWidth;
+
+    testimonial_cards_scoll_left += 200;
+
+    if (testimonial_cards_scoll_left >= testimonial_scroll_width - 882) { testimonial_cards_scoll_left = 0; }
+    testimonial_cards.scrollLeft = testimonial_cards_scoll_left;
+}
+
+// scroll testimonials to left
+function scrollTestimonialsLeft(container_id_name) {
+    const testimonial_cards = document.getElementById(container_id_name)
+    let testimonial_cards_scoll_left = testimonial_cards.scrollLeft;
+    const testimonial_scroll_width = testimonial_cards.scrollWidth;
+
+    testimonial_cards_scoll_left -= 200;
+    if (testimonial_cards_scoll_left <= 0) { testimonial_cards_scoll_left = testimonial_scroll_width; }
+    testimonial_cards.scrollLeft = testimonial_cards_scoll_left;
+}
+
+
+// view learning paths
+learning_paths.style.display = "none"
 
 function viewLearningPath(learning_path_name) {
 
@@ -121,6 +114,7 @@ function viewLearningPath(learning_path_name) {
     let scrollDiv = document.getElementById(learning_path_name).offsetTop;
     window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
 }
+
 
 submit_dob.addEventListener("click", () => {
 
@@ -160,6 +154,8 @@ submit_dob.addEventListener("click", () => {
 
 })
 
+
+// changed background color of course based on complexity
 for (path_info of path) {
     if (path_info.classList.contains('easy')) {
         path_info.style.backgroundColor = "#09ff00"
